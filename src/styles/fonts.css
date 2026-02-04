@@ -1,0 +1,28 @@
+/* PP Editorial New Font Faces */
+@font-face {
+    font-family: 'PP Editorial New';
+    src: url('/fonts/PPEditorialNew-Free_for_personal_use/PPEditorialNew-Free for personal use/PPEditorialNew-Ultralight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PP Editorial New';
+    src: url('/fonts/PPEditorialNew-Free_for_personal_use/PPEditorialNew-Free for personal use/PPEditorialNew-UltralightItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PP Editorial New';
+    src: url('/fonts/PPEditorialNew-Free_for_personal_use/PPEditorialNew-Free for personal use/PPEditorialNew-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PP Editorial New';
+    src: url('/fonts/PPEditorialNew-Free_for_personal_use/PPEditorialNew-Free for personal use/PPEditorialNew-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Rounded square background -->
+  <rect width="512" height="512" rx="80" ry="80" fill="#2d2a2a"/>
+  
+  <!-- DNA Helix Logo -->
+  <g fill="none" stroke="#e89f6b" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Upper triangle (hollow) -->
+    <path d="M256 100 L175 220 L256 220 M256 100 L337 220 L256 220"/>
+    
+    <!-- Lower triangle (hollow) -->
+    <path d="M256 412 L175 292 L256 292 M256 412 L337 292 L256 292"/>
+    
+    <!-- S-curve connecting the triangles -->
+    <path d="M220 220 C220 256, 292 256, 292 292"/>
+    <path d="M292 220 C292 256, 220 256, 220 292"/>
+  </g>
+</svg>
