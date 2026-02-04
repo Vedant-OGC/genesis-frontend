@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from 'react';
 import { marked } from 'marked';
 import PhaseTracker from './PhaseTracker';
 import { HoverBorderGradient } from './ui/HoverBorderGradient';
-import { API_BASE_URL } from '../config';
+import { API_BASE_URL, RESEARCH_ENABLED } from '../config';
 
 // Configure marked
 marked.setOptions({ breaks: true, gfm: true });
@@ -98,6 +98,24 @@ export default function ResearchSection() {
         const idea = input.trim();
         if (!idea) {
             alert('Please enter a research question!');
+            return;
+        }
+
+        // Check if research is enabled
+        if (!RESEARCH_ENABLED) {
+            setShowOutput(true);
+            setOutputText(`## Research Temporarily Paused
+
+Live research is currently disabled to conserve API resources (Admin is broke).
+
+**Want to see it in action?** Request a live demo from the creator.
+
+**What you can do:**
+- Explore the interface and features
+- Check back in a few minutes
+- Contact the admin for demo access
+
+*Thank you for your patience!*`);
             return;
         }
 
