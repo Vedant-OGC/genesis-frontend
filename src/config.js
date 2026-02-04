@@ -10,4 +10,4 @@ export const API_BASE_URL = isDevelopment
 // Set to FALSE to disable research (saves API quota)
 // Set to TRUE to enable research
 // ============================================
-export const RESEARCH_ENABLED = true;
+export const RESEARCH_ENABLED = false;
