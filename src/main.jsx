@@ -10,4 +10,4 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 );
 
-console.log('🧬 Project GENESIS loaded - Built by Newton Mishra');
+console.log('🧬 Project GENESIS loaded - Built by Vedant Mishra');
