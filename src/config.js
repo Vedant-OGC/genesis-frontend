@@ -2,7 +2,7 @@
 const isDevelopment = import.meta.env.DEV;
 
 export const API_BASE_URL = isDevelopment
-    ? '' 
-    : 'https://genesis-api-xmqn.onrender.com';
+    ? ''
+    : 'https://genesis-backend-040k.onrender.com';
 
 export const RESEARCH_ENABLED = true;
