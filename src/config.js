@@ -5,4 +5,4 @@ export const API_BASE_URL = isDevelopment
     ? '' 
     : 'https://genesis-api-xmqn.onrender.com';
 
-export const RESEARCH_ENABLED = false;
+export const RESEARCH_ENABLED = true;
