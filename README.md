@@ -221,7 +221,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-**Vedant Mishra**
+**Newton Mishra**
 
 - GitHub: [@Vedant-OGC](https://github.com/Vedant-OGC)
 - Project: Built for Google Gemini 3 Hackathon
