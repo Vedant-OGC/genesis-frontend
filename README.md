@@ -27,7 +27,7 @@ Project GENESIS is a cutting-edge AI research scientist that autonomously conduc
 
 This repository contains the **frontend** of Project GENESIS. The backend API is hosted separately:
 
-👉 **Backend Repository**: [github.com/Vedant-OGC/genesis-backend](https://github.com/Vedant-OGC/genesis-backend)
+👉 **Backend Repository**: [Genesis Backend here](https://github.com/Vedant-OGC/genesis-backend)
 
 ### Tech Stack
 
