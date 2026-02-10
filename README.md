@@ -239,12 +239,12 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🔗 Links
 
-- **Live Demo**: [https://your-vercel-url.vercel.app](https://your-vercel-url.vercel.app)
+- **Live Demo**: [https://your-vercel-url.vercel.app](https://trygenesis.vercel.app/)
 - **Backend Repository**: [https://github.com/Vedant-OGC/genesis-backend](https://github.com/Vedant-OGC/genesis-backend)
 - **Devpost Submission**: [Coming Soon]
 
 ---
 
 <p align="center">
-  <strong>Built with 🧬 by Vedant Mishra for Google Gemini 3 Hackathon</strong>
+  <strong>Built with 🧬 by Newton Mishra for Google Gemini 3 Hackathon</strong>
 </p>
