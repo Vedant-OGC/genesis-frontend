@@ -2,7 +2,7 @@
 
 **An AI-Powered Research Assistant that transforms curiosity into comprehensive research papers.**
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-blue)](https://your-vercel-url.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue)](https://trygenesis.vercel.app/)
 [![Backend Repo](https://img.shields.io/badge/Backend-Repository-green)](https://github.com/Vedant-OGC/genesis-backend)
 [![Built with Gemini 3](https://img.shields.io/badge/Powered%20by-Gemini%203-orange)](https://ai.google.dev/)
 
@@ -27,7 +27,7 @@ Project GENESIS is a cutting-edge AI research scientist that autonomously conduc
 
 This repository contains the **frontend** of Project GENESIS. The backend API is hosted separately:
 
-👉 **Backend Repository**: [github.com/Vedant-OGC/genesis-backend](https://github.com/Vedant-OGC/genesis-backend)
+👉 **Backend Repository**: [Genesis Backend here](https://github.com/Vedant-OGC/genesis-backend)
 
 ### Tech Stack
 
@@ -221,7 +221,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-**Vedant Mishra**
+**Newton Mishra**
 
 - GitHub: [@Vedant-OGC](https://github.com/Vedant-OGC)
 - Project: Built for Google Gemini 3 Hackathon
@@ -239,12 +239,12 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🔗 Links
 
-- **Live Demo**: [https://your-vercel-url.vercel.app](https://your-vercel-url.vercel.app)
+- **Live Demo**: [https://your-vercel-url.vercel.app](https://trygenesis.vercel.app/)
 - **Backend Repository**: [https://github.com/Vedant-OGC/genesis-backend](https://github.com/Vedant-OGC/genesis-backend)
 - **Devpost Submission**: [Coming Soon]
 
 ---
 
 <p align="center">
-  <strong>Built with 🧬 by Vedant Mishra for Google Gemini 3 Hackathon</strong>
+  <strong>Built with 🧬 by Newton Mishra for Google Gemini 3 Hackathon</strong>
 </p>
