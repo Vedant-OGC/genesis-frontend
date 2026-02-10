@@ -2,7 +2,7 @@
 
 **An AI-Powered Research Assistant that transforms curiosity into comprehensive research papers.**
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-blue)](https://your-vercel-url.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue)](https://trygenesis.vercel.app/)
 [![Backend Repo](https://img.shields.io/badge/Backend-Repository-green)](https://github.com/Vedant-OGC/genesis-backend)
 [![Built with Gemini 3](https://img.shields.io/badge/Powered%20by-Gemini%203-orange)](https://ai.google.dev/)
 
