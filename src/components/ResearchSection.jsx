@@ -44,6 +44,7 @@ export default function ResearchSection() {
     const [thinkingText, setThinkingText] = useState('');
     const [outputText, setOutputText] = useState('');
     const [isThinkingOpen, setIsThinkingOpen] = useState(false);
+    const [feedback, setFeedback] = useState('');
     const [showApproval, setShowApproval] = useState(false);
     const [showOutput, setShowOutput] = useState(false);
 
@@ -215,7 +216,12 @@ Live research is currently disabled to conserve API resources (Admin is broke).
             const response = await fetch(`${API_BASE_URL}/genesis/research/approve`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ session_id: sessionId, approved: true })
+                body: JSON.stringify({
+                    session_id: sessionId,
+                    approved: true,
+                    modified_structure: outputText,
+                    feedback: feedback.trim()
+                })
             });
 
             const reader = response.body.getReader();
@@ -233,11 +239,25 @@ Live research is currently disabled to conserve API resources (Admin is broke).
 
                     const data = line.substring(6);
 
-                    if (data === '[DONE]') {
-                        setOutputText(currentOutput);
-                        setCurrentPhase(6);
+                    if (line.includes('[PHASE:5]')) {
+                        setShowApproval(false);
+                        setOutputText('');
+                        setThinkingText('');
+                        continue;
+                    }
+                    
+                    if (line.includes('[PHASE:4]')) {
+                        // Refinement loop
+                        setOutputText('');
+                        setFeedback('');
+                        setShowApproval(false);
+                        continue;
+                    }
+                    
+                    if (line.includes('[AWAITING_APPROVAL]')) {
                         setIsLoading(false);
-                        return;
+                        setShowApproval(true);
+                        continue;
                     }
 
                     if (data.startsWith('[PHASE:')) continue;
@@ -280,6 +300,26 @@ Live research is currently disabled to conserve API resources (Admin is broke).
         a.download = 'genesis-research.md';
         a.click();
         URL.revokeObjectURL(url);
+    };
+
+    const downloadLabBook = async () => {
+        if (!sessionId) return;
+        try {
+            const response = await fetch(`${API_BASE_URL}/genesis/research/log/${sessionId}`);
+            if (!response.ok) throw new Error('Failed to fetch lab book');
+            const data = await response.json();
+            
+            const blob = new Blob([data.logbook], { type: 'text/markdown' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `genesis-lab-book-${sessionId}.md`;
+            a.click();
+            URL.revokeObjectURL(url);
+        } catch (error) {
+            console.error('Error downloading lab book:', error);
+            alert('Failed to download lab book.');
+        }
     };
 
     const handleKeyDown = (e) => {
@@ -330,6 +370,7 @@ Live research is currently disabled to conserve API resources (Admin is broke).
                     <h3>Research Output</h3>
                     {showOutput && !isLoading && (
                         <div className="output-actions">
+                            <button className="btn btn-outline btn-small" onClick={downloadLabBook}>📓 Lab Book</button>
                             <button className="btn btn-outline btn-small" onClick={copyOutput}>📋 Copy</button>
                             <button className="btn btn-outline btn-small" onClick={downloadOutput}>📥 Download</button>
                         </div>
@@ -382,8 +423,19 @@ Live research is currently disabled to conserve API resources (Admin is broke).
                 {/* Approval Section */}
                 {showApproval && (
                     <div className="approval-section">
-                        <h3>📋 Structure Review</h3>
-                        <p>Review the proposed structure above. Ready to generate the full research paper?</p>
+                        <h3>📋 Structure Review & Steering</h3>
+                        <p>Review the proposed structure above. You can provide feedback to steer the research before generating the final paper.</p>
+                        
+                        <div className="feedback-input-container">
+                            <textarea
+                                className="feedback-input"
+                                placeholder="E.g., 'Add a section about the ethical implications' or just leave blank to approve as is."
+                                value={feedback}
+                                onChange={(e) => setFeedback(e.target.value)}
+                                rows={2}
+                            />
+                        </div>
+
                         <div className="approval-buttons">
                             <button
                                 className="btn btn-success"
@@ -391,9 +443,9 @@ Live research is currently disabled to conserve API resources (Admin is broke).
                                 disabled={isLoading}
                             >
                                 {isLoading ? (
-                                    <><span className="spinner"></span> Generating...</>
+                                    <><span className="spinner"></span> {feedback.trim() ? 'Refining...' : 'Generating...'}</>
                                 ) : (
-                                    '✅ Approve & Generate Paper'
+                                    feedback.trim() ? '🔄 Refine Structure' : '✅ Approve & Generate Paper'
                                 )}
                             </button>
                             <button className="btn btn-outline" onClick={startOver}>
