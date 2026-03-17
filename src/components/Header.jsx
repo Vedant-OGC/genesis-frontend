@@ -12,7 +12,7 @@ export default function Header() {
             </div>
             <nav className="nav-links">
                 <a href="#research">Research</a>
-                <a href="#about">About</a>
+                <a href="#/about">About</a>
             </nav>
         </header>
     );

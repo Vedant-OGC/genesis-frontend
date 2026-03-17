@@ -1,0 +1,230 @@
+.about-page {
+    background-color: #FAF9F6;
+    /* Anthropic-like warm off-white */
+    color: #1a1a1a;
+    min-height: 100vh;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* Clean sans for body */
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    /* Above the shader background */
+}
+
+.about-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-logo {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #111;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.about-nav-links a {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-left: 30px;
+    transition: color 0.2s ease;
+}
+
+.about-nav-links a:hover {
+    color: #111;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 60px auto 100px;
+    padding: 0 40px;
+}
+
+.about-header {
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+}
+
+.about-title {
+    font-family: 'PP Editorial New', 'Times New Roman', serif;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 200;
+    color: #111;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.about-subtitle {
+    font-size: 1.35rem;
+    color: #555;
+    line-height: 1.6;
+    font-weight: 300;
+    max-width: 600px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.about-text-block {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 40px;
+    border-top: 1px solid #e0dfdc;
+    padding-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .about-text-block {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.about-text-block h2 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.about-text-content {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.about-text-content p {
+    margin-bottom: 20px;
+}
+
+.about-text-content p:last-child {
+    margin-bottom: 0;
+}
+
+.about-text-content ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.about-text-content li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.about-text-content li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #d1d1cd;
+}
+
+.about-text-content li strong {
+    color: #111;
+    font-weight: 500;
+}
+
+.about-footer {
+    margin-top: 100px;
+    padding-top: 60px;
+    border-top: 1px solid #e0dfdc;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: flex-end;
+    /* Pushes the links to the right */
+    margin-bottom: 20px;
+}
+
+.footer-links-container {
+    display: flex;
+    gap: 15vw;
+    /* Creates the space between the two lists */
+    padding-right: 5vw;
+}
+
+.footer-link-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-link-group li {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link-group li::before {
+    display: none;
+    /* remove the bullets from earlier styles */
+}
+
+.footer-link-group a {
+    color: #1a1a1a;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.footer-link-group a:hover {
+    color: #777;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.footer-logo {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: clamp(6rem, 14vw, 20rem);
+    font-weight: 500;
+    color: #1a1a1a;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    margin: 0;
+    padding-top: 20px;
+    text-transform: none;
+    /* keep casing exact */
+}
+
+.back-link {
+    display: inline-block;
+    color: #555;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #111;
+}
