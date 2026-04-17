@@ -239,7 +239,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🔗 Links
 
-- **Live Demo**: [https://your-vercel-url.vercel.app](https://trygenesis.vercel.app/)
+- **Live Demo**: [click here](https://trygenesis.vercel.app/)
 - **Backend Repository**: [https://github.com/Vedant-OGC/genesis-backend](https://github.com/Vedant-OGC/genesis-backend)
 - **Devpost Submission**: [Coming Soon]
 
