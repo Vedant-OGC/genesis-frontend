@@ -215,7 +215,7 @@ This is a hackathon project, but contributions are welcome!
 
 ## 📜 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is closed source and available under the [PROPRIETARY LICENSE AGREEMENT](LICENSE.md).
 
 ---
 
